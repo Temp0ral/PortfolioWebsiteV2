@@ -1,0 +1,177 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ea8c284108.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+<div class="container">
+    <nav>
+        <div class="logo"><span>E</span>mile.</div>
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Potfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+    </nav>
+    <div class="header-text">
+       <p>Computer Science Student</p> 
+       <h1>Hi, I'm <span>Emile</span><br> Gustafson-Dahill</h1>
+    </div>
+</div>
+
+</div>
+<!-----about----->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="pics/pic3.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1> 
+                <p>I’m Emile, Enthusiastic computer science student with a unique blend of experiences in bartending, 
+                    esports coaching, and mechanics. Known for adeptly balancing technical acumen with interpersonal skills, 
+                    demonstrating adaptability and a strong work ethic across diverse environments.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>HTML<br>CSS<br>JavaScript</li>
+                            <li><span>Object Oriented Programming</span><br>C++<br>Python</li>
+                            <li><span>Operating Systems</span><br>Linux<br>Unix</li>
+                            <li><span>Database Management</span><br>SQL</li>
+                            <li><span>Computer Aided Design</span><br>Fusion 360</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>Associates Degree in General Studies</li>
+                            <li><span>2023-Current</span><br>Pursuing Bachelors of Computer Science</li>
+                        </ul>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-----portfolio----->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="pics/pic11.jpeg">
+                <div class="layer">
+                    <h3>My Photography Website</h3>
+                    <p>A blog and gallery that I designed with HTML, CSS, and JavaScript that showcases my photography.</p>
+                    <a href="JS Photography/index.html" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="pics/pic8.png">
+                <div class="layer">
+                    <h3>To Do List</h3>
+                    <p>This is a simple To Do List that utilizes JavaScript.</p>
+                    <a href="JS To Do List/index.html" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="pics/pic9.png">
+                <div class="layer">
+                    <h3>Weather App</h3>
+                    <p>This JavaScript app utilizes an online api to gather current weather info for any city.</p>
+                    <a href="JS Weather App/Weather.html" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="pics/pic10.jpeg">
+                <div class="layer">
+                    <h3>Sample Website</h3>
+                    <p>This is a sample detailing website that I designed with HTML, CSS, and Javascript.</p>
+                    <a href="JS Website/website.html" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----Contact----->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> emiledahill@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 1(781)-724-0135</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/emile-gustafson-dahill-901a53182"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                    <a href="resume/My Resume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="7" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+
+<script>
+    
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+       for(tablink of tablinks) {
+        tablink.classList.remove("active-link");
+       }
+       for(tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+       }
+       event.currentTarget.classList.add("active-link");
+       document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+</script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwCxn7tFp-2dp2LDkKZvwEEkCoDF4cuMHPaw__wxM7EMvchp-xz7O72S40vYxBxxm4/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
